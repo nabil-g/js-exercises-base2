@@ -6,7 +6,15 @@
 </head>
 <body>
   <form>
-    <label for="nom">Votre nom  : </label><input type="text" name="nom" value="" id="nom" />
+    <label for="nom">Votre nom  : </label><input type="text" name="nom" value="" id="nom" onkeyup="afficher()" />
   </form>
+
+  <script type="text/javascript">
+    function afficher() {
+      var msg = document.getElementById('nom').value;
+      alert(msg);
+    }
+  </script>
+
 </body>
 </html>

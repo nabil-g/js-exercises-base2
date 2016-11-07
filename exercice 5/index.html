@@ -6,11 +6,34 @@
   </head>
   <body>
     <div class="conteneur">
-      <img src="images/image1.jpg" id="image1" />
-      <img src="images/image2.jpg" id="image2" />
-      <img src="images/image3.jpg" id="image3" />
-      <img src="images/image4.jpg" id="image4" />
-      <img src="images/image5.jpg" id="image5" />
+      <img src="images/image1.jpg" onmouseover="survol(this)" onmouseout="nonsurvol(this)" id="image1" />
+      <img src="images/image2.jpg" onmouseover="survol(this)" onmouseout="nonsurvol(this)" id="image2" />
+      <img src="images/image3.jpg" onmouseover="survol(this)" onmouseout="nonsurvol(this)" id="image3" />
+      <img src="images/image4.jpg" onmouseover="survol(this)" onmouseout="nonsurvol(this)" id="image4" />
+      <img src="images/image5.jpg" onmouseover="survol(this)" onmouseout="nonsurvol(this)" id="image5" />
     </div>
+
+    <script type="text/javascript">
+      function survol(cible) {
+        var nomfichier = cible.getAttributeNode('src').value;
+
+
+
+        nomfichier = nomfichier.substr(0,13);
+
+        nomfichier = nomfichier + "_2.jpg";
+
+        cible.src = nomfichier;
+
+      }
+
+      // function nonsurvol(cible) {
+      //   var nomfichier = cible.getAttributeNode('src').value;
+      //   nomfichier = nomfichier.substr(0,13);
+      //   nomfichier = nomfichier + ".jpg";
+      //   cible.src = nomfichier;
+      // }
+    </script>
+
   </body>
 </html>
